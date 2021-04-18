@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import pic1 from "../../../images/DSC_0137-2.jpg";
-import pic2 from "../../../images/DSC_0339.jpg";
-import pic3 from "../../../images/IMG_5889-2 copy.jpg";
-import pic4 from "../../../images/ZHO_1187.jpg";
+import pic1 from "../../../images/DSC_0137-2-compressed.jpg";
+import pic2 from "../../../images/DSC_0339-min.jpg";
+import pic3 from "../../../images/IMG_5889-2 copy-min.jpg";
+import pic4 from "../../../images/ZHO_1187-min.jpg";
 import logo from "../../../images/Asset 3-8.png";
 import "./NavbarCarousel.css";
 import { Link, useHistory } from "react-router-dom";

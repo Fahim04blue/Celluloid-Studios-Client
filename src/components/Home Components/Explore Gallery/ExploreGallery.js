@@ -1,15 +1,12 @@
 import React from "react";
 import "./ExploreGallery.css";
-import pic1 from "../../../images/G-1.jpg";
-import pic2 from "../../../images/G-2.jpg";
-import pic3 from "../../../images/G-3.jpg";
-import pic4 from "../../../images/G-4.jpg";
-import pic5 from "../../../images/G-5.jpg";
-import pic6 from "../../../images/G-6.jpg";
-import pic7 from "../../../images/G-7.jpg";
-import pic8 from "../../../images/G-8.jpg";
-import pic9 from "../../../images/G-9.jpg";
-import pic10 from "../../../images/G-10.jpg";
+import pic1 from "../../../images/G-1-min.jpg";
+import pic2 from "../../../images/G-2-min.jpg";
+import pic4 from "../../../images/G-4-min.jpg";
+import pic5 from "../../../images/G-5-min.jpg";
+import pic8 from "../../../images/G-8-min.jpg";
+import pic9 from "../../../images/G-9-min.jpg";
+import pic10 from "../../../images/G-10-min.jpg";
 
 const ExploreGallery = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import pic1 from "../../../images/team-1.jpg";
-import pic2 from "../../../images/Team-2.JPG";
-import pic3 from "../../../images/team-3.jpg";
+import pic1 from "../../../images/team-1-min.jpg";
+import pic2 from "../../../images/Team-2-min.JPG";
+import pic3 from "../../../images/team-3-min.jpg";
 import "./ProfessionalTeam.css";
 const teamInfo = [
   {

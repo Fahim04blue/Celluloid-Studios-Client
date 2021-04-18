@@ -1,5 +1,5 @@
 import React from "react";
-import group from "../../../images/File3568.jpg";
+import group from "../../../images/File3568-min.jpg";
 import "./AboutUs.css";
 
 const AboutUs = () => {

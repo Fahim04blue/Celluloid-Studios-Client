@@ -93,8 +93,12 @@ const BookNow = () => {
             </form>
           </div>
           <div style={{ display: bookingData ? "block" : "none" }}>
-            <h3 className="text-center">
-              You'll be charged with ${booking.price}{" "}
+            <h3
+              style={{ fontSize: "35px" }}
+              className="text-center heading-txt"
+            >
+              You'll be charged with{" "}
+              <span className="heading-portion">${booking.price}</span>{" "}
             </h3>
             <Payment handlePaymentSuccess={handlePaymentSuccess} />
           </div>
