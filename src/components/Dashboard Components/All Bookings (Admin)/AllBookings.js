@@ -4,7 +4,7 @@ import { LoginContext } from "../../Login Components/LoginContextProvider/LoginC
 
 const AllBookings = () => {
   const [orders, setOrders] = useState([]);
-
+  document.title = "All Bookings-Celluloid Studios";
   useEffect(() => {
     fetch("https://celluloid-studios-server.herokuapp.com/allOrders")
       .then((res) => res.json())

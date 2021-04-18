@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 const AddAdmin = () => {
+  document.title = "Add Admin-Celluloid Studios";
   const {
     register,
     handleSubmit,

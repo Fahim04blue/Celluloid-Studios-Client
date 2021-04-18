@@ -12,6 +12,7 @@ const BookNow = () => {
   const { id } = useParams();
   const [loggedInUser, setLoggedInUser] = useContext(LoginContext);
   const [booking, setBooking] = useState({});
+  document.title = "Book Now-Celluloid Studios";
   const [bookingData, setBookingData] = useState(null);
   useEffect(() => {
     fetch(`https://celluloid-studios-server.herokuapp.com/service/${id}`)

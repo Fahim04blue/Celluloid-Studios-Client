@@ -6,6 +6,7 @@ import { LoginContext } from "../../Login Components/LoginContextProvider/LoginC
 
 const Bookings = () => {
   const [orders, setOrders] = useState([]);
+  document.title = "Bookings-Celluloid Studios";
   const [loggedInUser, setLoggedInUser] = useContext(LoginContext);
   useEffect(() => {
     fetch(

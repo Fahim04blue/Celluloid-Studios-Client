@@ -8,7 +8,7 @@ const AddService = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-
+  document.title = "Add Service-Celluloid Studios";
   const onSubmit = (data, e) => {
     console.log(data);
     const serviceDetails = {

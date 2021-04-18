@@ -11,6 +11,7 @@ const Review = () => {
   } = useForm();
 
   const [loggedInUser, setLoggedInUser] = useContext(LoginContext);
+  document.title = "Review-Celluloid Studios";
   const onSubmit = (data, e) => {
     console.log(data);
     const reviewDetails = {

@@ -15,6 +15,7 @@ if (!firebase.apps.length) {
 
 const Login = () => {
   const [loggedInUser, setLoggedInUser] = useContext(LoginContext);
+  document.title = "Login-Celluloid Studios";
   let history = useHistory();
   let location = useLocation();
   let { from } = location.state || { from: { pathname: "/" } };

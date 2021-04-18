@@ -23,6 +23,7 @@ import PrivateRoute from "../../components/Login Components/Private Route/Privat
 
 const Dashboard = () => {
   const [loggedInUser, setLoggedInUser] = useContext(LoginContext);
+  document.title = "Dashboard-Celluloid Studios";
   const [isAdmin, setIsAdmin] = useState(false);
   useEffect(() => {
     fetch("https://celluloid-studios-server.herokuapp.com/isAdmin", {

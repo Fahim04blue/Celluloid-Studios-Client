@@ -7,6 +7,7 @@ import { Table } from "react-bootstrap";
 
 const ManagerService = () => {
   const [services, setServices] = useState([]);
+  document.title = "Manage Services-Celluloid Studios";
   useEffect(() => {
     fetch("https://celluloid-studios-server.herokuapp.com/services")
       .then((res) => res.json())
