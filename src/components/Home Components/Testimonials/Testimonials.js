@@ -34,7 +34,7 @@ const Testimonials = () => {
   };
   const [testimonials, setTestimonials] = useState([]);
   useEffect(() => {
-    fetch("https://celluloid-studios-server.herokuapp.com/reviews")
+    fetch("https://celluloid-studios-server.herokuapp.com/review")
       .then((res) => res.json())
       .then((data) => setTestimonials(data));
   }, []);

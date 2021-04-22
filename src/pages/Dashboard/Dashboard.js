@@ -26,7 +26,7 @@ const Dashboard = () => {
   document.title = "Dashboard-Celluloid Studios";
   const [isAdmin, setIsAdmin] = useState(false);
   useEffect(() => {
-    fetch("https://celluloid-studios-server.herokuapp.com/isAdmin", {
+    fetch("https://celluloid-studios-server.herokuapp.com/admin/isAdmin", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email: loggedInUser.email }),

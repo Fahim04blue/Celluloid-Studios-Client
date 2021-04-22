@@ -8,7 +8,8 @@ import "./NavbarCarousel.css";
 import { Link, useHistory } from "react-router-dom";
 import { useContext } from "react";
 import { LoginContext } from "../../Login Components/LoginContextProvider/LoginContextProvider";
-
+import firebase from "firebase/app";
+import "firebase/auth";
 const NavbarCarousel = () => {
   const [loggedInUser, setLoggedInUser] = useContext(LoginContext);
   const [navBackground, setNavBackground] = useState(false);
@@ -29,6 +30,16 @@ const NavbarCarousel = () => {
   const history = useHistory();
   const handleLogin = () => {
     history.push("/login");
+  };
+  const handleLogout = () => {
+    firebase
+      .auth()
+      .signOut()
+      .catch((err) => {
+        console.log(err);
+      });
+    sessionStorage.removeItem("token");
+    setLoggedInUser({});
   };
   return (
     <div>
@@ -77,7 +88,7 @@ const NavbarCarousel = () => {
               {loggedInUser.email ? (
                 <li class="nav-item">
                   <a
-                    onClick={() => setLoggedInUser({})}
+                    onClick={handleLogout}
                     class="nav-link text-white"
                     style={{ cursor: "pointer" }}
                   >

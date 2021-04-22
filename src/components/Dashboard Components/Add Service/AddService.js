@@ -19,7 +19,7 @@ const AddService = () => {
       desc3: data.desc3,
       desc4: data.desc4,
     };
-    fetch("https://celluloid-studios-server.herokuapp.com/addService", {
+    fetch("https://celluloid-studios-server.herokuapp.com/services", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(serviceDetails),

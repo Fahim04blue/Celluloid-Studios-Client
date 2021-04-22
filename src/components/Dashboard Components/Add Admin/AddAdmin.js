@@ -13,7 +13,7 @@ const AddAdmin = () => {
     const admin = {
       email: data.email,
     };
-    fetch("https://celluloid-studios-server.herokuapp.com/addAdmin", {
+    fetch("https://celluloid-studios-server.herokuapp.com/admin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(admin),

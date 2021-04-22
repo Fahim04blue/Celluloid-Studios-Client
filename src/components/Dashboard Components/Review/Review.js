@@ -19,7 +19,7 @@ const Review = () => {
       image: loggedInUser.photoURL,
       review: data.review,
     };
-    fetch("https://celluloid-studios-server.herokuapp.com/addReview", {
+    fetch("https://celluloid-studios-server.herokuapp.com/review", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(reviewDetails),

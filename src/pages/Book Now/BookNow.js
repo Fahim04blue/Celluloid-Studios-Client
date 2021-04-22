@@ -15,7 +15,7 @@ const BookNow = () => {
   document.title = "Book Now-Celluloid Studios";
   const [bookingData, setBookingData] = useState(null);
   useEffect(() => {
-    fetch(`https://celluloid-studios-server.herokuapp.com/service/${id}`)
+    fetch(`https://celluloid-studios-server.herokuapp.com/services/${id}`)
       .then((res) => res.json())
       .then((data) => setBooking(data));
   }, []);
@@ -38,7 +38,7 @@ const BookNow = () => {
       bookedUserInfo: bookingData,
       paymentId,
     };
-    fetch("https://celluloid-studios-server.herokuapp.com/addOrder", {
+    fetch("https://celluloid-studios-server.herokuapp.com/orders", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(orderDetails),

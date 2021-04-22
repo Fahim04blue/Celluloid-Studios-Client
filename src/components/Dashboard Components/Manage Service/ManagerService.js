@@ -14,7 +14,7 @@ const ManagerService = () => {
       .then((data) => setServices(data));
   }, [services]);
   const handleDelete = (id) => {
-    fetch(`https://celluloid-studios-server.herokuapp.com/delete/${id}`, {
+    fetch(`https://celluloid-studios-server.herokuapp.com/services/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

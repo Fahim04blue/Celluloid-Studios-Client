@@ -10,7 +10,7 @@ const Bookings = () => {
   const [loggedInUser, setLoggedInUser] = useContext(LoginContext);
   useEffect(() => {
     fetch(
-      "https://celluloid-studios-server.herokuapp.com/orders?email=" +
+      "https://celluloid-studios-server.herokuapp.com/orders/order?email=" +
         loggedInUser.email
     )
       .then((res) => res.json())

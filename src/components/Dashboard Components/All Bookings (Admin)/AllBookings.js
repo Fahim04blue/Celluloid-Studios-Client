@@ -6,22 +6,25 @@ const AllBookings = () => {
   const [orders, setOrders] = useState([]);
   document.title = "All Bookings-Celluloid Studios";
   useEffect(() => {
-    fetch("https://celluloid-studios-server.herokuapp.com/allOrders")
+    fetch("https://celluloid-studios-server.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
   const handleDone = (id) => {
-    fetch(`https://celluloid-studios-server.herokuapp.com/updateDone/${id}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(orders.status),
-    })
+    fetch(
+      `https://celluloid-studios-server.herokuapp.com/orders/updateDone/${id}`,
+      {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(orders.status),
+      }
+    )
       .then((res) => res.json())
       .then((data) => console.log(data));
   };
   const handleOnGoing = (id) => {
     fetch(
-      `https://celluloid-studios-server.herokuapp.com/updateOnGoing/${id}`,
+      `https://celluloid-studios-server.herokuapp.com/orders/updateOnGoing/${id}`,
       {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
@@ -33,7 +36,7 @@ const AllBookings = () => {
   };
   const handlePending = (id) => {
     fetch(
-      `https://celluloid-studios-server.herokuapp.com/updatePending/${id}`,
+      `https://celluloid-studios-server.herokuapp.com/orders/updatePending/${id}`,
       {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },

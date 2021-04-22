@@ -35,26 +35,20 @@ const Login = () => {
   const handleGmailSignIn = () => {
     firebase
       .auth()
-      .setPersistence(firebase.auth.Auth.Persistence.SESSION)
-      .then(() => {
-        firebase
-          .auth()
-          .signInWithPopup(gmailProvider)
-          .then((result) => {
-            const { displayName, email, photoURL } = result.user;
-            const signedInUser = {
-              isSignedIn: true,
-              name: displayName,
-              email: email,
-              photoURL: photoURL,
-            };
-            setUserToken();
-            setLoggedInUser(signedInUser);
-            history.replace(from);
-            console.log(displayName, email);
-          });
+      .signInWithPopup(gmailProvider)
+      .then((result) => {
+        const { displayName, email, photoURL } = result.user;
+        const signedInUser = {
+          isSignedIn: true,
+          name: displayName,
+          email: email,
+          photoURL: photoURL,
+        };
+        setUserToken();
+        setLoggedInUser(signedInUser);
+        history.replace(from);
+        console.log(displayName, email);
       })
-
       .catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;

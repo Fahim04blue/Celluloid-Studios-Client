@@ -4,10 +4,13 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
+import LoginContextProvider from "./components/Login Components/LoginContextProvider/LoginContextProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <LoginContextProvider>
+      <App />
+    </LoginContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
